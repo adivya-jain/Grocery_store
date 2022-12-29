@@ -1,16 +1,16 @@
-document.getElementById("SIGNUP").addEventListener("submit", (event) => {
+document.getElementById("LOGIN").addEventListener("submit", (event) => {
     event.preventDefault()
 })
 
 
 
-function SignUp() {
+function LogIn() {
     // const Name = document.getElementById("name").value;
-    
+
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    firebase.auth().signInWithEmailAndPassword(email,password);
-    
+    firebase.auth().signInWithEmailAndPassword(email, password);
+
     // .catch(error){
     //     document.getElementById("error").innerHTML=error.message;
     // };
