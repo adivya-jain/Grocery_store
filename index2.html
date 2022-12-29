@@ -11,15 +11,15 @@
 <body>
 
 
-    <center><form onsubmit="LogIn()" id="LOGIN" class="LogIn-form">
+    <center><form  id="LOGIN" class="LogIn-form">
         <h2>Sign Up Now</h2>
         <!-- <input type="text" id="name" placeholder="write your name" class="box"> -->
         <small><span id="error" style="color: red;"></span></small>
-        <input type="email" id="email" placeholder="write your email" class="box">
-        <input type="password" id="password" placeholder="write your password" class="box">
+        <input type="text" id="email" placeholder="write your email" class="box">
+        <input type="text" id="password" placeholder="write your password" class="box">
         <div style="display: flex;" class="buttons">
             <button class="btn" style="margin: 2%;" onclick="guest()">Guest User</button>
-            <button type="submit" style="margin: 2%;" class="btn" id="Submit-btn">SUBMIT</button>
+            <button onclick="SignUp()" style="margin: 2%;" class="btn" id="Submit-btn">SUBMIT</button>
 
         </div>
     </form></center>
