@@ -80,14 +80,19 @@
             <a href="#" class="btn">check-out</a>
         </div>
 
-        <form action="" class="login-form">
+        <form action="" id="user-login" class="login-form">
+            <h2>Hola!</h2>
+            
             <h3>Login Now</h3>
             <input type="email" placeholder="enter your email" class="box">
             <input type="password" placeholder="enter password" class="box">
             <p>Forget password <a href="#">Click Here</a></p>
-            <p>Don't Have an account <a href="#">Make Now</a></p>
+            <p>Don't Have an account <a href="index2.html">Make Now</a></p>
             <input type="submit" value="login-now" class="btn">
+
         </form>
+        <button type="button" onClick="logout()" class="logout-btn btn" id="logout">Log Out</button>
+
 
 
     </header>
@@ -452,65 +457,44 @@
 
     </footer>
     <!-- footer section ended -->
-     <!-- loader part started -->
+
+
+    <!-- loader part started -->
     <div class="loader-container">
         <img src="loader.gif" alt="">
     </div>
 
 
-    <!-- loader section -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- loader section ended -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- js file linking -->
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCdLCDPgP-OlqnYyzs5o65VOmH4JydofUU",
+            authDomain: "grocery-firebase-4478b.firebaseapp.com",
+            databaseURL: "https://grocery-firebase-4478b-default-rtdb.firebaseio.com",
+            projectId: "grocery-firebase-4478b",
+            storageBucket: "grocery-firebase-4478b.appspot.com",
+            messagingSenderId: "497994801463",
+            appId: "1:497994801463:web:c984496408034824c23ab2",
+            measurementId: "G-Y0HF4323PK"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
     <script src="js/style.js"></script>
+
+
 
 </body>
 

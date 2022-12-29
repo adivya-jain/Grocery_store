@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <center><form onsubmit="SignUp()" id="SIGNUP" class="SignUp-form">
+        <h2>Sign Up Now</h2>
+        <!-- <input type="text" id="name" placeholder="write your name" class="box"> -->
+        <small><span id="error" style="color: red;"></span></small>
+        <input type="email" id="email" placeholder="write your email" class="box">
+        <input type="password" id="password" placeholder="write your password" class="box">
+        <div style="display: flex;" class="buttons">
+            <button class="btn" style="margin: 2%;" onclick="guest()">Guest User</button>
+            <button type="submit" style="margin: 2%;" class="btn" id="Submit-btn" onclick="SignUp()">SUBMIT</button>
+
+        </div>
+    </form></center>
+
+
+    <style>
+        :root {
+            --orange: #ff7800;
+            --red: rgb(220, 24, 24);
+
+            --black: #130f40;
+            --light-color: #666;
+            --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+            --border: .2rem solid rgba(0, 0, 0, .1);
+            --outline: .1rem solid rgba(0, 0, 0, .1);
+            --outline-hover: .2rem solid var(--black);
+        }
+
+        .SignUp-form {
+            position: relative;
+            top: 110%;
+            
+            padding: 2rem;
+            /* display: flex; ye mat krna vrna side by side aayega sab */
+            text-align: center;
+            width: 30rem;
+            box-shadow: var(--box-shadow);
+            /* gap: 1rem; */
+            border-radius: .5rem;
+            background: #fff;
+        }
+
+        .SignUp-form .box {
+
+            width: 80%;
+            margin: .7rem 0;
+            background: #eee;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 1.6rem;
+            color: var(--black);
+            text-transform: none;
+        }
+
+        .SignUp-form h2 {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: var(--black);
+        }
+.buttons{
+    display: grid;
+}
+        .btn {
+            margin-top: 1rem;
+            display: inline-block;
+            /* grid-template-columns: repeat(autofit, minmax(30rem, 1fr)); */
+            padding: .8rem 3rem;
+            font-size: 1.7rem;
+            border-radius: .5rem;
+            border: .2rem solid var(--black);
+            color: var(--black);
+            cursor: pointer;
+            background: none;
+            width: 15rem;
+            font-size: medium;
+
+        }
+
+        .btn:hover {
+            background: var(--orange);
+            color: #fff;
+             
+
+        }
+
+        @media (max-width:450px)
+        {
+            .SignUp-form{
+                width: 9rem;
+                padding: 1rem;
+
+            }
+            .btn{
+                width: 4.5rem;
+                padding: .5rem 1rem;
+                /* font-size: 0.8rem; */
+                font-size: small;
+            }
+        }
+
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCdLCDPgP-OlqnYyzs5o65VOmH4JydofUU",
+    authDomain: "grocery-firebase-4478b.firebaseapp.com",
+    databaseURL: "https://grocery-firebase-4478b-default-rtdb.firebaseio.com",
+    projectId: "grocery-firebase-4478b",
+    storageBucket: "grocery-firebase-4478b.appspot.com",
+    messagingSenderId: "497994801463",
+    appId: "1:497994801463:web:c984496408034824c23ab2",
+    measurementId: "G-Y0HF4323PK"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="js\style2.js"></script>
+</body>
+
+</html>
