@@ -108,56 +108,31 @@ window.onload = fadeOut;
 
 function LogIn() {
   // const Name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    firebase.auth().signInWithEmailAndPassword(email, password);
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  firebase.auth().signInWithEmailAndPassword(email, password);
+  // .catch (error) {
+  //   document.getElementById("error").innerHTML = error.message;
+  // }
+
 }
 
-
-
+let LOGOUT = document.querySelector("#logout")
 firebase.auth().onAuthStateChanged((user) => {
   if (!user) {
     document.getElementById("LOGIN").addEventListener("submit", (event) => {
       event.preventDefault()
-  })
-  
-  
-    // location.replace("index2.html")
-    // document.getElementById("LOGIN").addEventListener("submit", (event) => {
-    //   event.preventDefault()
-    // })
-    // document.getElementById("user-login").innerHTML = "Hello," + "Guest"
-    // function guest() {
-    //   document.getElementById("user-login").innerHTML = "Hello," + "Guest"
-    //   // location.replace("index1.html")
-
-    // }
-
-    .catch(error)
-    {
-        document.getElementById("error").innerHTML=error.message;
-    };
-    // saveMessage(Name, email, password);
-    // document.getElementById('SIGNUP').reset();
-
-
+    })
   }
   else {
-    document.getElementById("LOGIN").innerHTML = `Hello,`+ `${user.email},`;//+`${<button>My Button</button>}`;
-    // let LOGOUT=document.querySelector("#logout")
-    // document.querySelector('logout').onclick=()=>{
-    //   LOGOUT.classList.toggle('active');}
+    document.getElementById("LOGIN").innerHTML = `Hello,` + `${user.email},`;//+`${<button>My Button</button>}`;
+
+    document.querySelector('logout').onclick = () => {
+      LOGOUT.classList.toggle('active');
+    }
 
 
-  }
-})
-firebase.auth().onAuthStateChanged((user) => {
-  if(user){
-
-  }
-  else{
-    
   }
 })
 
@@ -165,4 +140,12 @@ function logout() {
   alert("Logout called");
   firebase.auth().signOut();
   location.reload();
+}
+function ForgetPass()
+{
+  const email = document.getElementById("email").value;
+  firebase.auth().sendPasswordResetEmail(email)
+  .then(()=>{
+    alert(`Password resert Link sended to ${email}`)
+  })
 }
