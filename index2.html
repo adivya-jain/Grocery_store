@@ -11,7 +11,7 @@
 <body>
 
 
-    <center><form onsubmit="SignUp()" id="SIGNUP" class="SignUp-form">
+    <center><form onsubmit="LogIn()" id="LOGIN" class="LogIn-form">
         <h2>Sign Up Now</h2>
         <!-- <input type="text" id="name" placeholder="write your name" class="box"> -->
         <small><span id="error" style="color: red;"></span></small>
@@ -19,7 +19,7 @@
         <input type="password" id="password" placeholder="write your password" class="box">
         <div style="display: flex;" class="buttons">
             <button class="btn" style="margin: 2%;" onclick="guest()">Guest User</button>
-            <button type="submit" style="margin: 2%;" class="btn" id="Submit-btn" onclick="SignUp()">SUBMIT</button>
+            <button type="submit" style="margin: 2%;" class="btn" id="Submit-btn">SUBMIT</button>
 
         </div>
     </form></center>
@@ -38,7 +38,7 @@
             --outline-hover: .2rem solid var(--black);
         }
 
-        .SignUp-form {
+        .LogIn-form {
             position: relative;
             top: 110%;
             
@@ -52,7 +52,7 @@
             background: #fff;
         }
 
-        .SignUp-form .box {
+        .LogIn-form .box {
 
             width: 80%;
             margin: .7rem 0;
@@ -64,7 +64,7 @@
             text-transform: none;
         }
 
-        .SignUp-form h2 {
+        .LogIn-form h2 {
             text-align: center;
             font-size: 2rem;
             text-transform: uppercase;
@@ -98,7 +98,7 @@
 
         @media (max-width:450px)
         {
-            .SignUp-form{
+            .LogIn-form{
                 width: 9rem;
                 padding: 1rem;
 
