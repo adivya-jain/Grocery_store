@@ -80,18 +80,22 @@
             <a href="#" class="btn">check-out</a>
         </div>
 
-        <form action="" id="user-login" class="login-form">
+        <form action="" id="LOGIN" onsubmit="LogIn()" class="login-form LogIn-form">
             <h2>Hola!</h2>
             
             <h3>Login Now</h3>
-            <input type="email" placeholder="enter your email" class="box">
-            <input type="password" placeholder="enter password" class="box">
+            <small><span id="error" style="color: red;"></span></small>
+            <input type="email" id="email" placeholder="enter your email" class="box">
+            <input type="password" id="password" placeholder="enter password" class="box">
             <p>Forget password <a href="#">Click Here</a></p>
             <p>Don't Have an account <a href="index2.html">Make Now</a></p>
-            <input type="submit" value="login-now" class="btn">
+            <!-- <input type="submit" value="login-now" class="btn"> -->
+            <button type="submit" style="margin: 2%;" class="btn" id="Submit-btn">SUBMIT</button>
+            <!-- <button class="btn" style="margin: 2%;" onclick="guest()">Guest User</button> -->
 
         </form>
-        <button type="button" onClick="logout()" class="logout-btn btn" id="logout">Log Out</button>
+
+        <button onclick="logout()" class="logout-btn btn" id="logout">Log Out</button>
 
 
 
