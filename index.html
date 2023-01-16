@@ -82,7 +82,7 @@
 
         <form action="" id="LOGIN" onsubmit="LogIn()" class="login-form LogIn-form">
             <h2>Hola!</h2>
-            
+
             <h3>Login Now</h3>
             <small><span id="error" style="color: red;"></span></small>
             <input type="email" id="email" placeholder="enter your email" class="box">
@@ -95,7 +95,9 @@
 
         </form>
 
-        <button onclick="logout()" class="logout-btn btn" id="logout">Log Out</button>
+        <div id="logout-container">
+            <button id="logout-button" style="display:none">Logout</button>
+        </div>
 
 
 
