@@ -117,7 +117,6 @@ function LogIn() {
   // }
 
 }
-
 let LOGOUT = document.querySelector("#logout")
 firebase.auth().onAuthStateChanged((user) => {
   if (!user) {
@@ -127,20 +126,19 @@ firebase.auth().onAuthStateChanged((user) => {
   }
   else {
     document.getElementById("LOGIN").innerHTML = `Hello,` + `${user.email},`;//+`${<button>My Button</button>}`;
-
-    document.querySelector('logout').onclick = () => {
-      LOGOUT.classList.toggle('active');
-    }
-
+    document.getElementById("logout-button").style.display = "block";
+  }
+})
+document.getElementById("logout-button").addEventListener("click", function () {
+  // Perform logout action (e.g. clear session, redirect to login page)
+  alert("Logout called");
+  firebase.auth().signOut();
+  location.reload();
+});
 
   }
 })
 
-function logout() {
-  alert("Logout called");
-  firebase.auth().signOut();
-  location.reload();
-}
 function ForgetPass()
 {
   const email = document.getElementById("email").value;
