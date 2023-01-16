@@ -339,7 +339,8 @@ section {
     color: var(--orange);
     text-decoration: underline;
 }
- /* .header .logout-btn{
+
+/* .header .logout-btn{
     position: relative;
     z-index: -1; 
     right: 2rem;
@@ -660,7 +661,7 @@ section {
 }
 
 .footer .box-container .box .links:hover i {
-    padding-right:2rem;
+    padding-right: 2rem;
 
 }
 
@@ -671,7 +672,7 @@ section {
     padding: 1rem 0;
 }
 
-.footer .box-container .box .share a{
+.footer .box-container .box .share a {
     height: 4rem;
     width: 4rem;
     line-height: 4rem;
@@ -682,11 +683,13 @@ section {
     background: #eee;
     text-align: center;
 }
-.footer .box-container .box .share a:hover{
+
+.footer .box-container .box .share a:hover {
     background: var(--orange);
     color: #fff;
 }
-.footer .box-container .box .email{
+
+.footer .box-container .box .email {
     width: 100%;
     margin: .7rem 0;
     padding: 1rem;
@@ -696,15 +699,16 @@ section {
     color: var(--black);
     text-transform: none;
 }
-.footer .box-container .box .payment-img
-{
+
+.footer .box-container .box .payment-img {
     margin-top: 2rem;
     height: 3rem;
 }
-.footer .credits{
+
+.footer .credits {
     text-align: center;
     margin-top: 1rem;
-    padding:1rem;
+    padding: 1rem;
     padding-top: 2.5rem;
     font-size: 2rem;
     color: var(--black);
@@ -713,11 +717,11 @@ section {
 
 }
 
-.footer .credits span{
+.footer .credits span {
     color: var(--orange);
 }
-.loader-container
-{
+
+.loader-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -730,13 +734,32 @@ section {
     justify-content: center;
     overflow: hidden;
 }
-.loader-container img{
+
+.loader-container img {
     width: 35rem;
 }
-.loader-container.fade-out{
+
+.loader-container.fade-out {
     top: 110%;
     opacity: 0;
 
+}
+
+
+/* LOGOUT */
+#logout-container {
+    text-align: right;
+}
+
+#logout-button {
+    background-color: #ff0000;
+    /* Red */
+    color: #ffffff;
+    /* White */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 
@@ -813,9 +836,10 @@ section {
     .heading {
         font-size: 2.5rem;
     }
-    .footer{
+
+    .footer {
         text-align: center;
-        
+
     }
 
 }
